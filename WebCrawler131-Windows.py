@@ -7,7 +7,7 @@ http = urllib3.PoolManager()
 headers = {
         'Upgrade-Insecure-Requests':'1',
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36Name',
-        "Referer": "http://www.mm131.net/"}
+        "Referer": "http://www.mm131.net/xinggan/5508.html"}
 
 # Get name url list. Because the web has these classify.
 base_url  = "http://www.mm131.net"
@@ -45,7 +45,7 @@ def getPic(pic_name, page_num):
     "Get & save pictures to local."
     pic_id = 1
     while True:
-        pic_url = "http://img1.mmmw.net/pic/" + str(page_num) + '/' + str(pic_id) + ".jpg"
+        pic_url = "https://img1.mmmw.net/pic/" + str(page_num) + '/' + str(pic_id) + ".jpg"
         response = http.request("get", pic_url, headers = headers)
         if response.status != 200:
             return
